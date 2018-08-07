@@ -16,7 +16,7 @@ function drawChar() {
   var random;
 
 
-  spellValue = [];
+  var spellValue = [];
   for (i=0;i<values.length;i++) {
     var value = values[i];
     var valueLenght = value.length;
