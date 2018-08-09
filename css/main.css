@@ -89,6 +89,10 @@ html {
   justify-content: flex-start;
   width: 59rem;
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  transition: .8s;
+  opacity: 0; }
+  .decoding-box.visible {
+    opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,6 +7,7 @@ var valuesLenght;
 function startMe() {
   setHeight();
   drawChar(gi);
+  $('.decoding-box').addClass('visible');
   var timeout5 = window.setTimeout(function() {
     $('.atf-container').addClass('marginized');
   }, 800);

@@ -43,4 +43,9 @@ html {
   width: 59rem;
   position: relative;
   margin-bottom: 2rem;
+  transition: .8s;
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
 }
