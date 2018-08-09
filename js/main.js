@@ -7,6 +7,10 @@ var valuesLenght;
 function startMe() {
   setHeight();
   drawChar(gi);
+  var timeout5 = window.setTimeout(function() {
+    $('.atf-container').addClass('marginized');
+  }, 800);
+
 }
 
 function setHeight() {
@@ -51,13 +55,13 @@ function drawChar(gi) {
       for (k=0;k<valueLenght;k++) {
         decodeMe(k);
       }
-    }, 1000);
+    }, 1200);
   } else {
     var timeout5 = window.setTimeout(function() {
       for (k=0;k<valueLenght;k++) {
         decodeMe(k);
       }
-    }, 700);
+    }, 1500);
   }
   function decodeMe(k) {
     var currentChar = '.char'+k;

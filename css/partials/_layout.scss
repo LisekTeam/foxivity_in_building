@@ -2,14 +2,26 @@ html {
   font-size: 62.5%;
 }
 .atf-container {
-  background-color: #000;
-  @include incol;
-  justify-content: center;
+  background-color: #ececec;
+  box-sizing: border-box;
+  padding: 0;
+  transition: 1.2s;
+  .atf-inner-cover {
+    background-color: #111111;
+    width: 100%;
+    height: 100%;
+    @include incol;
+    justify-content: center;
+  }
+  &.marginized {
+    padding: 4rem;
+  }
 }
 .decoding-phrase, .extention {
   font-family: $font-main;
   color: #fff;
   font-size: 7rem;
+  font-weight: 300;
 }
 .decoding-phrase > .single-char.foxed {
   color: #d96115;

@@ -49,16 +49,26 @@ html {
   font-size: 62.5%; }
 
 .atf-container {
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  background-color: #ececec;
+  box-sizing: border-box;
+  padding: 0;
+  transition: 1.2s; }
+  .atf-container .atf-inner-cover {
+    background-color: #111111;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .atf-container.marginized {
+    padding: 4rem; }
 
 .decoding-phrase, .extention {
   font-family: "Source Code Pro", monospace;
   color: #fff;
-  font-size: 7rem; }
+  font-size: 7rem;
+  font-weight: 300; }
 
 .decoding-phrase > .single-char.foxed {
   color: #d96115; }
