@@ -60,14 +60,63 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
   .atf-container.marginized {
-    padding: 4rem; }
+    padding: 5rem; }
+
+.right-wing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10rem;
+  display: flex;
+  overflow-x: hidden; }
+  .right-wing .menu-box {
+    margin: auto;
+    width: 10rem;
+    height: 3.6rem;
+    transition: 1s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 10rem; }
+    .right-wing .menu-box.slided {
+      left: 0; }
+    .right-wing .menu-box .burger-line-cont {
+      width: 100%;
+      height: 1.2rem;
+      position: relative;
+      width: 10rem; }
+      .right-wing .menu-box .burger-line-cont .burger-line {
+        position: absolute;
+        top: .5rem;
+        width: 3rem;
+        height: .2rem;
+        background-color: #ffffff;
+        transition: 0.3s; }
+        .right-wing .menu-box .burger-line-cont .burger-line.line-top {
+          right: 2rem; }
+        .right-wing .menu-box .burger-line-cont .burger-line.line-mid {
+          right: 2rem; }
+        .right-wing .menu-box .burger-line-cont .burger-line.line-bottom {
+          right: 2rem; }
+    .right-wing .menu-box:hover .burger-line.line-top {
+      width: 4rem; }
+    .right-wing .menu-box:hover .burger-line.line-bottom {
+      background-color: #d96115;
+      width: 6rem; }
+    .right-wing .menu-box:hover .burger-line.line-mid {
+      background-color: #d96115;
+      width: 5rem; }
 
 .decoding-phrase, .extention {
   font-family: "Source Code Pro", monospace;
   color: #fff;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 300; }
 
 .decoding-phrase > .single-char.foxed {
@@ -87,7 +136,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 59rem;
+  width: 52rem;
   position: relative;
   margin-bottom: 2rem;
   transition: .8s;

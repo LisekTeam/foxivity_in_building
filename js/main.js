@@ -8,7 +8,7 @@ function startMe() {
   setHeight();
   drawChar(gi);
   $('.decoding-box').addClass('visible');
-  var timeout5 = window.setTimeout(function() {
+  var timeout7 = window.setTimeout(function() {
     $('.atf-container').addClass('marginized');
   }, 800);
 
@@ -37,6 +37,9 @@ function drawChar(gi) {
         $('.single-char').each(function() {
           $(this).addClass('foxed');
         });
+        var timeout6 = window.setTimeout(function() {
+          $('.menu-box').addClass('slided');
+        }, 3200);
       }
       function drawAgain() {
         $('.single-char').each(function() {
@@ -80,9 +83,9 @@ function drawChar(gi) {
             $('.extention').addClass('visible');
           }
           drawChar(gi);
-        }, 500);
+        }, 700);
       }
-    }, 180 * (k+1));
+    }, 170 * (k+1));
   }
   $('#drawing-stop').on('click', function() {
     isDrawing = false;

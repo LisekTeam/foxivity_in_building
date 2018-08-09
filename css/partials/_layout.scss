@@ -12,19 +12,83 @@ html {
     height: 100%;
     @include incol;
     justify-content: center;
+    position: relative;
   }
   &.marginized {
-    padding: 4rem;
+    padding: 5rem;
+  }
+}
+.right-wing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10rem;
+  display: flex;
+  overflow-x: hidden;
+  .menu-box {
+    margin: auto;
+    width: 10rem;
+    height: 3.6rem;
+    transition: 1s;
+    cursor: pointer;
+    @include incol;
+    position: relative;
+    left: 10rem;
+    &.slided {
+      left: 0;
+    }
+    .burger-line-cont {
+      width: 100%;
+      height: 1.2rem;
+      position: relative;
+      width: 10rem;
+      .burger-line {
+        position: absolute;
+        top: .5rem;
+        width: 3rem;
+        height: .2rem;
+        background-color: #ffffff;
+        transition: 0.3s;
+        &.line-top {
+          right: 2rem;
+        }
+        &.line-mid {
+          right: 2rem;
+        }
+        &.line-bottom {
+          right: 2rem;
+        }
+
+      }
+
+    }
+    &:hover {
+
+      .burger-line {
+        &.line-top {
+          width: 4rem;
+        }
+        &.line-bottom {
+          background-color: $color-foxy;
+          width: 6rem;
+        }
+        &.line-mid {
+          background-color: $color-foxy;
+          width: 5rem;
+        }
+      }
+    }
   }
 }
 .decoding-phrase, .extention {
   font-family: $font-main;
   color: #fff;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 300;
 }
 .decoding-phrase > .single-char.foxed {
-  color: #d96115;
+  color: $color-foxy;
 }
 .decoding-phrase > .single-char.foxed.ondraw {
   color: #fff;
@@ -40,7 +104,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 59rem;
+  width: 52rem;
   position: relative;
   margin-bottom: 2rem;
   transition: .8s;
