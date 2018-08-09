@@ -55,10 +55,30 @@ html {
   align-items: center;
   justify-content: center; }
 
-.decoding-phrase {
+.decoding-phrase, .extention {
   font-family: "Source Code Pro", monospace;
   color: #fff;
-  font-size: 5rem;
-  margin-bottom: 5rem; }
+  font-size: 7rem; }
+
+.decoding-phrase > .single-char.foxed {
+  color: #d96115; }
+
+.decoding-phrase > .single-char.foxed.ondraw {
+  color: #fff; }
+
+.extention {
+  opacity: 0;
+  transition: 1s; }
+
+.extention.visible {
+  opacity: 1; }
+
+.decoding-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 59rem;
+  position: relative;
+  margin-bottom: 2rem; }
 
 /*# sourceMappingURL=main.css.map */
