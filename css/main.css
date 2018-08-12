@@ -157,9 +157,22 @@ html {
     width: 52rem;
     position: relative;
     margin-bottom: 1rem;
-    transition: 3s;
+    transition: 4s;
     opacity: 0; }
     .title-container .decoding-box.visible {
+      opacity: 1; }
+  .title-container .describe-box .description-sentence-pl, .title-container .describe-box .description-en-box .description-sentence-en {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 1.6rem;
+    margin: 0 1.5rem 0 .5rem;
+    letter-spacing: .35rem;
+    opacity: 0;
+    transition: 1s; }
+    .title-container .describe-box .description-sentence-pl:last-child, .title-container .describe-box .description-en-box .description-sentence-en:last-child {
+      margin: 0 0 0 .6rem; }
+    .title-container .describe-box .visible.description-sentence-pl, .title-container .describe-box .description-en-box .visible.description-sentence-en {
       opacity: 1; }
   .title-container .describe-box {
     display: flex;
@@ -167,19 +180,15 @@ html {
     align-items: center;
     width: 52rem;
     position: relative; }
-    .title-container .describe-box p {
-      color: #fff;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 200;
-      font-size: 1.6rem;
-      margin: 0 1.5rem 0 .5rem;
-      letter-spacing: .35rem; }
-      .title-container .describe-box p:last-child {
-        margin: 0 0 0 .6rem; }
-    .title-container .describe-box .description-sentence-pl {
-      opacity: 0;
-      transition: 1s; }
-      .title-container .describe-box .description-sentence-pl.visible {
-        opacity: 1; }
+    .title-container .describe-box .description-en-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%; }
+      .title-container .describe-box .description-en-box .description-sentence-en {
+        margin: 0 3rem 0 .6rem; }
 
 /*# sourceMappingURL=main.css.map */

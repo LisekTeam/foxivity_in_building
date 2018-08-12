@@ -19,6 +19,28 @@ function setHeight() {
   $('#sec1-atf-cont').height($(window).innerHeight());
 }
 
+function switchLang() {
+  var interval1 = setInterval(function() {
+    $('.description-sentence-pl').each(function() {
+      if($(this).hasClass('visible')) {
+        $(this).removeClass('visible');
+        var timeout12 = window.setTimeout(function() {
+          $('.description-sentence-en').each(function() {
+            $(this).addClass('visible');
+          });
+        }, 900);
+      } else {
+        $('.description-sentence-en').each(function() {
+          $(this).removeClass('visible');
+        });
+        var timeout11 = window.setTimeout(function() {
+          $('.description-sentence-pl').addClass('visible');
+        }, 900);
+      }
+    });
+  }, 10000);
+}
+
 function showSubtitles() {
   var timeout8 = window.setTimeout(function() {
     $('.description1').addClass('visible');
@@ -28,6 +50,7 @@ function showSubtitles() {
   }, 6500);
   var timeout10 = window.setTimeout(function() {
     $('.description3').addClass('visible');
+    switchLang();
   }, 9500);
 }
 

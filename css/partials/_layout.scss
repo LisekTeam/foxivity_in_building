@@ -127,8 +127,24 @@ html {
     width: 52rem;
     position: relative;
     margin-bottom: 1rem;
-    transition: 3s;
+    transition: 4s;
     opacity: 0;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  %description-sentence {
+    color: #fff;
+    font-family: $font-mont;
+    font-weight: 200;
+    font-size: 1.6rem;
+    margin: 0 1.5rem 0 .5rem;
+    letter-spacing: .35rem;
+    opacity: 0;
+    transition: 1s;
+    &:last-child {
+      margin: 0 0 0 .6rem;
+    }
     &.visible {
       opacity: 1;
     }
@@ -137,22 +153,18 @@ html {
     @include inrow;
     width: 52rem;
     position: relative;
-    p {
-      color: #fff;
-      font-family: $font-mont;
-      font-weight: 200;
-      font-size: 1.6rem;
-      margin: 0 1.5rem 0 .5rem;
-      letter-spacing: .35rem;
-      &:last-child {
-        margin: 0 0 0 .6rem;
-      }
-    }
     .description-sentence-pl {
-      opacity: 0;
-      transition: 1s;
-      &.visible {
-        opacity: 1;
+      @extend %description-sentence;
+    }
+    .description-en-box {
+      @include inrow;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      .description-sentence-en {
+        @extend %description-sentence;
+        margin: 0 3rem 0 .6rem;
       }
     }
   }
