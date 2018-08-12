@@ -12,11 +12,23 @@ function startMe() {
   var timeout7 = window.setTimeout(function() {
     $('.atf-container').addClass('marginized');
   }, 800);
-
+  showSubtitles();
 }
 
 function setHeight() {
   $('#sec1-atf-cont').height($(window).innerHeight());
+}
+
+function showSubtitles() {
+  var timeout8 = window.setTimeout(function() {
+    $('.description1').addClass('visible');
+  }, 2900);
+  var timeout9 = window.setTimeout(function() {
+    $('.description2').addClass('visible');
+  }, 6500);
+  var timeout10 = window.setTimeout(function() {
+    $('.description3').addClass('visible');
+  }, 9500);
 }
 
 function drawChar(gi) {

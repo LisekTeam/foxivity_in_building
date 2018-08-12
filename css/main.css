@@ -49,7 +49,7 @@ html {
   font-size: 62.5%; }
 
 .atf-container {
-  background-color: #ececec;
+  background-color: #fff;
   box-sizing: border-box;
   padding: 0;
   transition: 1.2s;
@@ -146,16 +146,40 @@ html {
 .extention.visible {
   opacity: 1; }
 
-.decoding-box {
+.title-container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 52rem;
-  position: relative;
-  margin-bottom: 1rem;
-  transition: .8s;
-  opacity: 0; }
-  .decoding-box.visible {
-    opacity: 1; }
+  flex-direction: column;
+  align-items: center; }
+  .title-container .decoding-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 52rem;
+    position: relative;
+    margin-bottom: 1rem;
+    transition: 3s;
+    opacity: 0; }
+    .title-container .decoding-box.visible {
+      opacity: 1; }
+  .title-container .describe-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 52rem;
+    position: relative; }
+    .title-container .describe-box p {
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 200;
+      font-size: 1.6rem;
+      margin: 0 1.5rem 0 .5rem;
+      letter-spacing: .35rem; }
+      .title-container .describe-box p:last-child {
+        margin: 0 0 0 .6rem; }
+    .title-container .describe-box .description-sentence-pl {
+      opacity: 0;
+      transition: 1s; }
+      .title-container .describe-box .description-sentence-pl.visible {
+        opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

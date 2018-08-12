@@ -2,7 +2,7 @@ html {
   font-size: 62.5%;
 }
 .atf-container {
-  background-color: #ececec;
+  background-color: #fff;
   box-sizing: border-box;
   padding: 0;
   transition: 1.2s;
@@ -117,16 +117,42 @@ html {
 .extention.visible {
   opacity: 1;
 }
-.decoding-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 52rem;
-  position: relative;
-  margin-bottom: 1rem;
-  transition: .8s;
-  opacity: 0;
-  &.visible {
-    opacity: 1;
+.title-container {
+  @include incol;
+  .decoding-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 52rem;
+    position: relative;
+    margin-bottom: 1rem;
+    transition: 3s;
+    opacity: 0;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  .describe-box {
+    @include inrow;
+    width: 52rem;
+    position: relative;
+    p {
+      color: #fff;
+      font-family: $font-mont;
+      font-weight: 200;
+      font-size: 1.6rem;
+      margin: 0 1.5rem 0 .5rem;
+      letter-spacing: .35rem;
+      &:last-child {
+        margin: 0 0 0 .6rem;
+      }
+    }
+    .description-sentence-pl {
+      opacity: 0;
+      transition: 1s;
+      &.visible {
+        opacity: 1;
+      }
+    }
   }
 }
