@@ -7,6 +7,7 @@ var valuesLenght;
 function startMe() {
   setHeight();
   drawChar(gi);
+  burgerOpen();
   $('.decoding-box').addClass('visible');
   var timeout7 = window.setTimeout(function() {
     $('.atf-container').addClass('marginized');
@@ -65,7 +66,7 @@ function drawChar(gi) {
       for (k=0;k<valueLenght;k++) {
         decodeMe(k);
       }
-    }, 1500);
+    }, 1200);
   }
   function decodeMe(k) {
     var currentChar = '.char'+k;
@@ -85,9 +86,20 @@ function drawChar(gi) {
           drawChar(gi);
         }, 700);
       }
-    }, 170 * (k+1));
+    }, 150 * (k+1));
   }
   $('#drawing-stop').on('click', function() {
     isDrawing = false;
+  });
+}
+
+function burgerOpen() {
+  $('#burger-menu-button').on('click', function() {
+    var mainMenu = $(this).closest('.atf-container').find('.atf-main-menu');
+    if(mainMenu.hasClass('open')) {
+      mainMenu.removeClass('open');
+    } else {
+      mainMenu.addClass('open');
+    }
   });
 }

@@ -52,7 +52,19 @@ html {
   background-color: #ececec;
   box-sizing: border-box;
   padding: 0;
-  transition: 1.2s; }
+  transition: 1.2s;
+  position: relative; }
+  .atf-container .atf-main-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: .8s;
+    background-color: #d96115;
+    width: 0;
+    z-index: 100; }
+    .atf-container .atf-main-menu.open {
+      width: 75vw; }
   .atf-container .atf-inner-cover {
     background-color: #111111;
     width: 100%;
@@ -63,7 +75,7 @@ html {
     justify-content: center;
     position: relative; }
   .atf-container.marginized {
-    padding: 5rem; }
+    padding: 4rem; }
 
 .right-wing {
   position: absolute;
@@ -88,14 +100,14 @@ html {
       left: 0; }
     .right-wing .menu-box .burger-line-cont {
       width: 100%;
-      height: 1.2rem;
+      height: 1rem;
       position: relative;
       width: 10rem; }
       .right-wing .menu-box .burger-line-cont .burger-line {
         position: absolute;
         top: .5rem;
         width: 3rem;
-        height: .2rem;
+        height: .1rem;
         background-color: #ffffff;
         transition: 0.3s; }
         .right-wing .menu-box .burger-line-cont .burger-line.line-top {
@@ -138,7 +150,7 @@ html {
   justify-content: flex-start;
   width: 52rem;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   transition: .8s;
   opacity: 0; }
   .decoding-box.visible {
