@@ -13,7 +13,8 @@ html {
     top: 0;
     height: 100%;
     transition: .6s;
-    background-color: $color-foxy;
+    //background-color: $color-foxy;
+    background-color: $color-foxy-blue;
     width: 0;
     z-index: 100;
     &.open {
