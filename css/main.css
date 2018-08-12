@@ -59,14 +59,16 @@ html {
     left: 0;
     top: 0;
     height: 100%;
-    transition: .8s;
+    transition: .6s;
     background-color: #d96115;
     width: 0;
     z-index: 100; }
     .atf-container .atf-main-menu.open {
       width: 75vw; }
   .atf-container .atf-inner-cover {
-    background-color: #111111;
+    background-image: url("../images/example-bg2.jpg");
+    background-size: cover;
+    background-position: center center;
     width: 100%;
     height: 100%;
     display: flex;

@@ -86,7 +86,7 @@ function drawChar(gi) {
           drawChar(gi);
         }, 700);
       }
-    }, 150 * (k+1));
+    }, 120 * (k+1));
   }
   $('#drawing-stop').on('click', function() {
     isDrawing = false;
