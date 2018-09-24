@@ -9,16 +9,88 @@ html {
   position: relative;
   .atf-main-menu {
     position: absolute;
+    display: flex;
+    align-items: center;
     left: 0;
     top: 0;
     height: 100%;
     transition: .6s;
-    //background-color: $color-foxy;
-    background-color: $color-foxy-blue;
+    // background-color: $color-foxy;
+    // background-color: $color-foxy-blue;
+    background-color: $color-foxy-blue-glass;
     width: 0;
     z-index: 100;
     &.open {
-      width: 75vw;
+      width: 100%;
+    }
+    .atf-main-menu-first {
+      height: 80%;
+      transition: .5s;
+      background-color: $color-foxy-blue;
+      width: 0;
+      z-index: 101;
+      border-right: .01rem solid #fff;
+      &.open {
+        width: 20%;
+        height: 100%;
+        border: none;
+      }
+    }
+    .atf-main-menu-second {
+      left: 20%;
+      height: 80%;
+      transition: .5s;
+      background-color: $color-foxy-blue;
+      width: 0;
+      z-index: 101;
+      border-right: .01rem solid #fff;
+      &.open {
+        width: 20%;
+        height: 100%;
+        border: none;
+      }
+    }
+    .atf-main-menu-third {
+      left: 40%;
+      height: 80%;
+      transition: .5s;
+      background-color: $color-foxy-blue;
+      width: 0;
+      z-index: 101;
+      border-right: .01rem solid #fff;
+      &.open {
+        width: 20%;
+        height: 100%;
+        border: none;
+      }
+    }
+    .atf-main-menu-fourth {
+      left: 60%;
+      height: 80%;
+      transition: .5s;
+      background-color: $color-foxy-blue;
+      width: 0;
+      z-index: 101;
+      border-right: .01rem solid #fff;
+      &.open {
+        width: 20%;
+        height: 100%;
+        border: none;
+      }
+    }
+    .atf-main-menu-fifth {
+      left: 80%;
+      height: 80%;
+      transition: .5s;
+      background-color: $color-foxy-blue;
+      width: 0;
+      z-index: 101;
+      border-right: .01rem solid #fff;
+      &.open {
+        width: 20%;
+        height: 100%;
+        border: none;
+      }
     }
   }
   .atf-inner-cover {
@@ -61,6 +133,7 @@ html {
       height: 1rem;
       position: relative;
       width: 10rem;
+      z-index: 999999;
       .burger-line {
         position: absolute;
         top: .5rem;

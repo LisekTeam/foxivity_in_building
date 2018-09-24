@@ -1,0 +1,45 @@
+{
+  "name": "Ginger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ginger": "npm run init:npm-install && npm run init:dirs && npm run init:files && npm run init:README",
+    "init:dirs": "mkdirp scss/partials css images js",
+    "init:files": "curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/index.html -o index.html && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/main.js -o js/main.js && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/main.css -o css/main.css && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/main.scss -o scss/main.scss && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/_animate.scss -o scss/partials/_animate.scss && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/_layout.scss -o scss/partials/_layout.scss && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/_mixins.scss -o scss/partials/_mixins.scss && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/_reset.scss -o scss/partials/_reset.scss && curl https://raw.githubusercontent.com/LisekTeam/project-pattern/master/_variables.scss -o scss/partials/_variables.scss && curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "init:README": "touch README.md",
+    "init:npm-install": "npm install",
+    "ginger-build": "npm run build:clean && npm run build:sassprefixer && npm run watch",
+    "build:clean": "rimraf css/",
+    "build:cleaning": "rimraf css/ scss/ js/ images/ .sass-cache/ .gitignore *.html README.md package-lock.json",
+    "build:clean-node": "rm -R node_modules/",
+    "build:clean-all": "npm run build:cleaning && npm run build:clean-node",
+    "build:sass": "sass --update scss/main.scss:css/main.css",
+    "build:autoprefixer": "autoprefixer-cli css/main.css",
+    "build:sassprefixer": "npm run build:sass && npm run build:autoprefixer",
+    "watch": "parallelshell \"npm run watch:sassprefixer\" \"npm run watch:browser-sync\" ",
+    "watch:sassprefixer": "onchange -d 100 scss/*.scss scss/partials/*scss -- npm run build:sassprefixer",
+    "watch:browser-sync": "browser-sync start --server --files css/*.css *.html js/*.js"
+  },
+  "keywords": [],
+  "author": "foxivity.codes",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "mkdirp": "^0.5.1",
+    "onchange": "^3.2.1",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "parallelshell": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanZdan/zadanie_11_6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PanZdan/zadanie_11_6/issues"
+  },
+  "homepage": "https://github.com/PanZdan/zadanie_11_6#readme"
+}
