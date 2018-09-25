@@ -138,35 +138,35 @@ function burgerOpen() {
     } else {
       mainMenu.addClass('open');
     }
-    component = $(this).closest('.atf-container').find('.atf-main-menu-first');
+    component = $(this).closest('.atf-container').find('.atf-main-menu-item');
     if(component.hasClass('open')) {
       component.removeClass('open');
     } else {
       component.addClass('open');
     }
-    component = $(this).closest('.atf-container').find('.atf-main-menu-second');
-    if(component.hasClass('open')) {
-      component.removeClass('open');
-    } else {
-      component.addClass('open');
-    }
-    component = $(this).closest('.atf-container').find('.atf-main-menu-third');
-    if(component.hasClass('open')) {
-      component.removeClass('open');
-    } else {
-      component.addClass('open');
-    }
-    component = $(this).closest('.atf-container').find('.atf-main-menu-fourth');
-    if(component.hasClass('open')) {
-      component.removeClass('open');
-    } else {
-      component.addClass('open');
-    }
-    component = $(this).closest('.atf-container').find('.atf-main-menu-fifth');
-    if(component.hasClass('open')) {
-      component.removeClass('open');
-    } else {
-      component.addClass('open');
-    }
+    // component = $(this).closest('.atf-container').find('.atf-main-menu-second');
+    // if(component.hasClass('open')) {
+    //   component.removeClass('open');
+    // } else {
+    //   component.addClass('open');
+    // }
+    // component = $(this).closest('.atf-container').find('.atf-main-menu-third');
+    // if(component.hasClass('open')) {
+    //   component.removeClass('open');
+    // } else {
+    //   component.addClass('open');
+    // }
+    // component = $(this).closest('.atf-container').find('.atf-main-menu-fourth');
+    // if(component.hasClass('open')) {
+    //   component.removeClass('open');
+    // } else {
+    //   component.addClass('open');
+    // }
+    // component = $(this).closest('.atf-container').find('.atf-main-menu-fifth');
+    // if(component.hasClass('open')) {
+    //   component.removeClass('open');
+    // } else {
+    //   component.addClass('open');
+    // }
   });
 }

@@ -11,6 +11,7 @@ html {
     position: absolute;
     display: flex;
     align-items: center;
+    flex-direction: row;
     left: 0;
     top: 0;
     height: 100%;
@@ -23,73 +24,14 @@ html {
     &.open {
       width: 100%;
     }
-    .atf-main-menu-first {
+    .atf-main-menu-item {
       height: 80%;
-      transition: .5s;
+      transition: .4s;
       background-color: $color-foxy-blue;
       width: 0;
-      z-index: 101;
-      border-right: .01rem solid #fff;
       &.open {
         width: 20%;
         height: 100%;
-        border: none;
-      }
-    }
-    .atf-main-menu-second {
-      left: 20%;
-      height: 80%;
-      transition: .5s;
-      background-color: $color-foxy-blue;
-      width: 0;
-      z-index: 101;
-      border-right: .01rem solid #fff;
-      &.open {
-        width: 20%;
-        height: 100%;
-        border: none;
-      }
-    }
-    .atf-main-menu-third {
-      left: 40%;
-      height: 80%;
-      transition: .5s;
-      background-color: $color-foxy-blue;
-      width: 0;
-      z-index: 101;
-      border-right: .01rem solid #fff;
-      &.open {
-        width: 20%;
-        height: 100%;
-        border: none;
-      }
-    }
-    .atf-main-menu-fourth {
-      left: 60%;
-      height: 80%;
-      transition: .5s;
-      background-color: $color-foxy-blue;
-      width: 0;
-      z-index: 101;
-      border-right: .01rem solid #fff;
-      &.open {
-        width: 20%;
-        height: 100%;
-        border: none;
-      }
-    }
-    .atf-main-menu-fifth {
-      left: 80%;
-      height: 80%;
-      transition: .5s;
-      background-color: $color-foxy-blue;
-      width: 0;
-      z-index: 101;
-      border-right: .01rem solid #fff;
-      &.open {
-        width: 20%;
-        height: 100%;
-        border: none;
       }
     }
   }
