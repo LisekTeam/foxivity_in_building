@@ -8,6 +8,7 @@ function startMe() {
   setHeight();
   drawChar(gi);
   burgerOpen();
+  iterationInterval();
   $('.decoding-box').addClass('visible');
   var timeout7 = window.setTimeout(function() {
     $('.atf-container').addClass('marginized');
@@ -128,6 +129,8 @@ function drawChar(gi) {
   });
 }
 
+
+
 function burgerOpen() {
   var mainMenu;
   var component;
@@ -138,35 +141,32 @@ function burgerOpen() {
     } else {
       mainMenu.addClass('open');
     }
-    component = $(this).closest('.atf-container').find('.atf-main-menu-item');
-    if(component.hasClass('open')) {
-      component.removeClass('open');
-    } else {
-      component.addClass('open');
-    }
-    // component = $(this).closest('.atf-container').find('.atf-main-menu-second');
-    // if(component.hasClass('open')) {
-    //   component.removeClass('open');
-    // } else {
-    //   component.addClass('open');
-    // }
-    // component = $(this).closest('.atf-container').find('.atf-main-menu-third');
-    // if(component.hasClass('open')) {
-    //   component.removeClass('open');
-    // } else {
-    //   component.addClass('open');
-    // }
-    // component = $(this).closest('.atf-container').find('.atf-main-menu-fourth');
-    // if(component.hasClass('open')) {
-    //   component.removeClass('open');
-    // } else {
-    //   component.addClass('open');
-    // }
-    // component = $(this).closest('.atf-container').find('.atf-main-menu-fifth');
-    // if(component.hasClass('open')) {
-    //   component.removeClass('open');
-    // } else {
-    //   component.addClass('open');
-    // }
   });
+}
+
+function iterationInterval() {
+  var components = [];
+  var i = 0;
+  var abc = false;
+  $('.atf-main-menu-item').each(function() {
+    components.push($(this));
+  });
+  $('#burger-menu-button').on('click', function(){
+    useIterationAdd();
+  });
+
+  if (abc == false) {
+    function useIterationAdd(abc) {
+      abc = true;
+      components[i].addClass('turn-on');
+      i++;
+      if (i < components.length) {
+        setTimeout(function() {
+          useIterationAdd();
+        }, 100);
+      }
+    }
+  } else { 
+    $('.atf-main-menu-item').removeClass('turn-on');
+}
 }

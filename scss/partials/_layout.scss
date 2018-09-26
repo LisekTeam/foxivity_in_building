@@ -29,9 +29,24 @@ html {
       transition: .4s;
       background-color: $color-foxy-blue;
       width: 0;
-      &.open {
+      &.turn-on {
         width: 20%;
         height: 100%;
+      }
+      .first {
+        background-color: red;
+      }
+      .second {
+        background-color: blue;
+      }
+      .third {
+        background-color: green;
+      }
+      .fourth {
+        background-color: yellow;
+      }
+      .fifth {
+        background-color: $color-foxy-blue;
       }
     }
   }
